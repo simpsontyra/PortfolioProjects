@@ -1,0 +1,13 @@
+import os, shutil 
+path = r"C:/Users/tsimpson/OneDrive - Gainwell Technologies/Desktop/PythonProject/"
+#r is stating that it is "raw text"
+
+for file in file_name:
+    if ".xlsx" in file and not os.path.exists(path + "xlsx files/" + file):
+        shutil.move(path + file, path + "xlsx files/" + file)
+    elif ".jpg" in file and not os.path.exists(path + "image files/" + file):
+        shutil.move(path + file, path + "image files/" + file)
+    elif ".txt" in file and not os.path.exists(path + "text files/" + file):
+        shutil.move(path + file, path + "text files/" + file)
+    else:
+        print("There are files in this path that were not moved")
